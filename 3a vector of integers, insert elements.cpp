@@ -4,16 +4,19 @@ using namespace std;
 int main() {
     vector<int>integers={10,20,30,40};
     cout<<"integer before inserting:"<<endl;
-    for(int i:integers){
-        cout<<i<<" ";
+    vector<int>::iterator i;
+     for( i=integers.begin();i!=integers.end();i++){
+         
+        cout<<*i<<" ";
     }
     cout<<" "<<endl;
     integers.push_back(50);
     cout<<"integer after inserting:"<<endl;
-    for(int i:integers){
-        cout<<i<<" ";
+    for(i=integers.begin();i!=integers.end();i++){
+        cout<<*i<<" ";
     }
     return 0;
+}
 }
 //output:
 integer before inserting:
